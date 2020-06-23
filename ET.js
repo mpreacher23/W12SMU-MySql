@@ -9,21 +9,21 @@ var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: process.env.myPassword,
+    password: superpassword,
     database: "employeeTrackerDB"
 });
 
 connection.query = util.promisify(connection.query);
 
-// connect to the mysql server and sql database
+//* connect to the mysql server and sql database
 connection.connect(function (err) {
     if (err) throw err;
     console.log("Connected as ID " + connection.threadId);
-    // run the start function after the connection is made to prompt the user
+    //* run the start function after the connection is made to prompt the user
     start();
 });
 
-// function which prompts the user for what action they should take
+//* function which prompts the user for what action they should take
 function start() {
     inquirer
         .prompt({

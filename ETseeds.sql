@@ -24,10 +24,10 @@ VALUES
 INSERT INTO Employee
     (first_name, last_name, role_id, manager_id)
 VALUES
-    ("Jon", "Christie", 1, 3),
-    ("Ashley", "Feese", 6, 4),
-    ("Macy", "Molina", 2, null),
-    ("Will", "VanHook", 5, null);
+    ("Jon", "Doe1", 1, 3),
+    ("Jon", "Doe2", 6, 4),
+    ("Jon", "Doe3", 2, null),
+    ("Jon", "Doe4", 5, null);
 
 SELECT *
 FROM employeeTrackerDB.Employee;
